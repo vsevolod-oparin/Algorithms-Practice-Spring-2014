@@ -1,0 +1,7 @@
+# Latex auxiliary files
+*.aux
+*.log
+*.out
+
+# Pdf files will be ignored to optimize space usage
+*.pdf
