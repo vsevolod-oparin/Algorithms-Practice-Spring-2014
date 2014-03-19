@@ -7,6 +7,18 @@
 \usepackage{xcolor}
 \usepackage{hyperref}
 
+\usepackage{amsthm,amsmath,amsfonts,amssymb}
+\usepackage{tikz}
+\usepackage{gensymb}
+
+\newcommand{\Prb}[1]{\underset{#1}{\textbf{Pr}}}
+\newcommand{\Ex}[1]{\underset{#1}{\textbf{E}}}
+\newcommand{\Prbb}[2]{\underset{#1}{\textbf{Pr}}\left[ \; #2 \;\right]}
+\newcommand{\Exb}[2]{\underset{#1}{\textbf{E}}\left[ \; #2 \;\right]}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\H}{\mathcal{H}}
+
 \lstset{
     language=Python,
     commentstyle=\color{gray!80!white}
@@ -15,7 +27,10 @@
     colorlinks=true,
     urlcolor=blue
 }
-
+\newcommand{\hint}[1]{
+%\rotatebox{90}{Подсказка: #1}
+}
+  
 \title{Практика по алгоритмам}
 \author{Алексей Давыдов, Всеволод Опарин \footnote{Составители сборника не являются авторами самих задач. Авторы не указаны в учебных целях.}}
 \date{Весна, 2014}
@@ -27,5 +42,8 @@
 \input{practice/p01.tex}
 \input{practice/p02.tex}
 \input{practice/p03.tex}
+\input{practice/p04.tex}
+\input{practice/p05.tex}
+\input{practice/p06.tex}
 
 \end{document}

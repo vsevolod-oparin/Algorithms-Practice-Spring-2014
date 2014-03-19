@@ -1,0 +1,47 @@
+\section{Практика 5. Хэширование}
+
+\subsection{Определения}
+
+Ниже есть несколько стандартных определений для семейства хэш-функций. $U(\H)$ обозначает равномерное распределение на семействе хэш-функций $\H$. Обратите внимание, что вероятности считаются по случайно взятой хэш-функции.
+
+\begin{itemize}
+  \item  Семейство хэш-функций $\H = \{ h_i : X \rightarrow Y \}_i$ называется универсальным, если 
+для любых $x_1 \neq x_2 \in X$ $$\Prb{h \leftarrow U(\H)}\left[ \; h(x_1) = h(x_2) \; \right] = \frac{1}{|Y|}$$.
+
+  \item  Семейство хэш-функций $\H = \{ h_i : X \rightarrow Y \}_i$ называется 2-независимым, если 
+для любых $x_1 \neq x_2 \in X, y_1, y_2 \in Y$ $$\Prb{h \leftarrow U(\H)}\left[ \; h(x_1) = y_1 \;\wedge\;h(x_2) = y_2 \; \right] = \frac{1}{|Y|^2}$$.
+
+  \item  Семейство хэш-функций $\H = \{ h_i : X \rightarrow Y \}_i$ называется k-независимым, если 
+для любых различных $x_1, x_2, \cdots, x_k \in X$, для любых, возможно совпадающих $y_1, y_2, \cdots, y_k \in Y$ $$\Prb{h \leftarrow U(\H)}\left[ \; \bigwedge_{i=1}^k h(x_i) = y_i \; \right] = \frac{1}{|Y|^k}$$.
+\end{itemize}
+
+\subsection{Домашнее задание. Теория}
+\textbf{Дедлайн: 19 марта, 23.59}
+
+\begin{enumerate}
+
+  \item Докажите, что из любое 2-независимое семейство хэш-функций является универсальным. Приведите пример семейства, которое является универсальным, но не является 2-независимым.
+
+  \item Докажите, что из любое $k+1$-независимое семейство хэш-функций является $k$-независимым.
+
+  \item Построим семейство хэш-функций $h_{a, b} : \Z_p \rightarrow \Z_p$, где $p$ -- простое.
+  Определим $h_{a, b} := a \cdot x + b \text{ mod } p$. Определим семейство 
+  $$\H = \{h_{a, b}\;|\; a, b \in \Z_p \}.$$
+  Покажите, что $\H$ -- 2-независимое.
+
+\end{enumerate}
+
+\subsection{Что почитать...}
+
+\begin{itemize}
+  
+  \item Дерево Фенвика можно посмотреть на \href{http://community.topcoder.com/tc?module=Static&d1=tutorials&d2=binaryIndexedTrees}{TopCoder-е}.
+
+  \item \href{http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.55.5156&rep=rep1&type=pdf}{Статья про скошенный список}.
+  
+  \item \href{http://www.slideshare.net/ekmett/skewbinary-online-lowest-common-ancestor-search}{Презентация скошенного списка}.
+
+\end{itemize}
+
+
+\clearpage
